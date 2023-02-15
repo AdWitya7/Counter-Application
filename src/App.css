@@ -1,0 +1,17 @@
+.App {
+  padding:40px;
+  display: flex;
+  justify-content: center;
+
+}
+.green {
+  color: green;
+}
+
+.blue {
+  color: blue;
+}
+
+.red {
+  color: red;
+}
