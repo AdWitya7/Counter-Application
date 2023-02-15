@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Counter Application</title>
+	<style>
+		h1 {
+			font-size: 3em;
+			text-align: center;
+			margin-top: 50px;
+		}
+		.green {
+			color: green;
+		}
+		.blue {
+			color: blue;
+		}
+		.red {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="counter">0</h1>
+	<div style="text-align: center;">
+		<button onclick="increment()">Increment</button>
+		<button onclick="decrement()">Decrement</button>
+	</div>
+	<script>
+		let counter = 0;
+		const counterElement = document.getElementById("counter");
+
+		function increment() {
+			if (counter < 10) {
+				counter++;
+				updateCounter();
+			}
+		}
+
+		function decrement() {
+			if (counter > 0) {
+				counter--;
+				updateCounter();
+			}
+		}
+
+		function updateCounter() {
+			counterElement.innerHTML = counter;
+			if (counter < 5) {
+				counterElement.className = "green";
+			} else if (counter < 10) {
+				counterElement.className = "blue";
+			} else {
+				counterElement.className = "red";
+			}
+		}
+	</script>
+</body>
+</html>
